@@ -7,7 +7,7 @@ Object.defineProperty(exports, '__esModule', {
 exports['default'] = function (request) {
     return function (config) {
         if (config.data) {
-            config.form = /application\/json/.test(config.headers['Content-Type']) ? JSON.stringify(config.data) : config.data;
+            config.body = /application\/json/.test(config.headers['Content-Type']) ? JSON.stringify(config.data) : config.data;
             delete config.data;
         }
 
